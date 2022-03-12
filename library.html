@@ -1,4 +1,4 @@
-<html style="font-size: 163.733px;">
+<html style="font-size: 106.667px;">
 
 <head>
   <meta charset="utf-8">
@@ -9279,7 +9279,7 @@
   <div id="app">
     <div class="successAppoint">
       <div class="time_bg">
-        2022-03-12 11:57:06
+        2022-03-12 13:17:44
       </div>
       <!---->
       <div class="detail">
@@ -9294,31 +9294,31 @@
         <div class="van-cell van-field">
           <div class="van-cell__title van-field__label"><span>姓名</span></div>
           <div class="van-cell__value van-field__value">
-            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control" value="张峻乾"></div>
+            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control"></div>
           </div>
         </div>
         <div class="van-cell van-field">
           <div class="van-cell__title van-field__label"><span>证件号码</span></div>
           <div class="van-cell__value van-field__value">
-            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control" value="130903199506260319"></div>
+            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control"></div>
           </div>
         </div>
         <div class="van-cell van-field">
           <div class="van-cell__title van-field__label"><span>手机号码</span></div>
           <div class="van-cell__value van-field__value">
-            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control" value="13463772041"></div>
+            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control"></div>
           </div>
         </div>
         <div class="van-cell van-field">
           <div class="van-cell__title van-field__label"><span>携带人员数量</span></div>
           <div class="van-cell__value van-field__value">
-            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control" value="0"></div>
+            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control"></div>
           </div>
         </div>
         <div class="van-cell van-field">
           <div class="van-cell__title van-field__label"><span>签到时间</span></div>
           <div class="van-cell__value van-field__value">
-            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control" id="sign_date"></div>
+            <div class="van-field__body"><input type="text" readonly="readonly" class="van-field__control"></div>
           </div>
         </div>
         <!---->
@@ -9362,17 +9362,19 @@
         ? "0" + (data.getMonth() + 1)
         : data.getMonth() + 1) +
       "-" +
-      (data.getDate() < 10 ? "0" + data.getDate() : data.getDate()) 
+      (data.getDate() < 10 ? "0" + data.getDate() : data.getDate())
       + " " + (data.getHours() < 10 ? "0" + data.getHours() : data.getHours())
-      + ":" +  (data.getMinutes() < 10 ? "0" + data.getMinutes() : data.getMinutes())
+      + ":" + (data.getMinutes() < 10 ? "0" + data.getMinutes() : data.getMinutes())
       + ":" + (data.getSeconds() < 10 ? "0" + data.getSeconds() : data.getSeconds());
 
-    var timestamp = Date.parse(pre);
+
     var time_bg = document.getElementsByClassName("time_bg")
     var sign_date = document.getElementById("sign_date")
 
     time_bg[0].innerText = pre
     sign_date.setAttribute("value", pre)
+
+    var timestamp = Date.parse(pre);
     var qy = getURLString("counter");
     if (qy != null && qy != timestamp) {
       var ret = changeURLArg(url, "counter", timestamp);
