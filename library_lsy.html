@@ -9374,19 +9374,20 @@
     time_bg[0].innerText = pre
     sign_date.setAttribute("value", pre)
 
-    var timestamp = Date.parse(pre);
-    var qy = getURLString("counter");
-    if (qy != null && qy != timestamp) {
-      var ret = changeURLArg(url, "counter", timestamp);
-      window.location.href = ret;
-    } else if (qy == null) {
-      let sp = window.location.href.split("?");
-      if (sp.length > 1) {
-        window.location.href = sp[0] + "?counter=" + timestamp + "&" + sp[1];
-      } else {
-        window.location.href = url + "?counter=" + timestamp;
-      }
-    }</script>
+    // var timestamp = Date.parse(pre);
+    // var qy = getURLString("counter");
+    // if (qy != null && qy != timestamp) {
+    //   var ret = changeURLArg(url, "counter", timestamp);
+    //   window.location.href = ret;
+    // } else if (qy == null) {
+    //   let sp = window.location.href.split("?");
+    //   if (sp.length > 1) {
+    //     window.location.href = sp[0] + "?counter=" + timestamp + "&" + sp[1];
+    //   } else {
+    //     window.location.href = url + "?counter=" + timestamp;
+    //   }
+    // }
+    </script>
   <script type="text/javascript">document.write(
       unescape(
         "%3Cspan style='display:none;' id='cnzz_stat_icon_1278664313'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1278664313' type='text/javascript'%3E%3C/script%3E"
